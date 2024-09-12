@@ -169,3 +169,122 @@
         tools:layout_editor_absoluteX="11dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
+package com.example.calculator;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private TextView resultView;
+    private String input1 = "", input2 = "", operator = "";
+    private boolean isOperatorPressed = false;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        resultView = findViewById(R.id.textView2);
+
+        Button button9 = findViewById(R.id.button9);
+        Button button10 = findViewById(R.id.button10);
+        Button button11 = findViewById(R.id.button11);
+        Button button5 = findViewById(R.id.button5);
+        Button button12 = findViewById(R.id.button12);
+        Button button13 = findViewById(R.id.button13);
+        Button button14 = findViewById(R.id.button14);
+        Button button15 = findViewById(R.id.button15);
+
+        // Set onClickListeners for buttons
+        setNumberButtonListener(button9, "7");
+        setNumberButtonListener(button10, "8");
+        setNumberButtonListener(button11, "9");
+
+        setOperatorButtonListener(button5, "+");
+        setOperatorButtonListener(button12, "-");
+        setOperatorButtonListener(button13, "*");
+        setOperatorButtonListener(button14, "/");
+
+        button15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performCalculation();
+            }
+        });
+    }
+
+    // Listener for number buttons
+    private void setNumberButtonListener(Button button, final String value) {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!isOperatorPressed) {
+                    input1 += value;
+                    resultView.setText(input1);
+                } else {
+                    input2 += value;
+                    resultView.setText(input2);
+                }
+            }
+        });
+    }
+
+    // Listener for operator buttons
+    private void setOperatorButtonListener(Button button, final String value) {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!input1.isEmpty()) {
+                    operator = value;
+                    isOperatorPressed = true;
+                    resultView.setText(operator);
+                }
+            }
+        });
+    }
+
+    // Perform calculation when "=" is pressed
+    private void performCalculation() {
+        if (!input1.isEmpty() && !input2.isEmpty()) {
+            double num1 = Double.parseDouble(input1);
+            double num2 = Double.parseDouble(input2);
+            double result = 0;
+
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    if (num2 != 0) {
+                        result = num1 / num2;
+                    } else {
+                        resultView.setText("Error");
+                        return;
+                    }
+                    break;
+            }
+
+            resultView.setText(String.valueOf(result));
+            resetInputs();
+        }
+    }
+
+    // Reset inputs after calculation
+    private void resetInputs() {
+        input1 = "";
+        input2 = "";
+        operator = "";
+        isOperatorPressed = false;
+    }
+}
+
