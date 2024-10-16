@@ -1,290 +1,293 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="317dp"
-        android:layout_height="22dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="0"
+        android:textSize="32sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="/" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="*" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/buttonDecimal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="." />
+
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+" />
+    </LinearLayout>
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="58dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="2"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:id="@+id/buttonEquals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="=" />
+</LinearLayout>
+======================================================================================
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="71dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="16dp"
-        android:text="3"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+java
 
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="51dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="16dp"
-        android:text="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="59dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="16dp"
-        android:text="4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+package com.example.calcnew;
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="55dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="20dp"
-        android:text="5"
-        app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="65dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="6"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="66dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="16dp"
-        android:text="7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="60dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="8"
-        app:layout_constraintStart_toEndOf="@+id/button11"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
-
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="59dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="9"
-        app:layout_constraintStart_toEndOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="46dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="16dp"
-        android:text="+"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="50dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:text="-"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
-
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="49dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:text="*"
-        app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toBottomOf="@+id/button12" />
-
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="52dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:text="/"
-        app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toBottomOf="@+id/button13" />
-
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="364dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="250dp"
-        android:text="="
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:layout_editor_absoluteX="11dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-package com.example.calculator;
-
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView resultView;
-    private String input1 = "", input2 = "", operator = "";
-    private boolean isOperatorPressed = false;
+    private TextView display;
+    private String currentOperator;
+    private double firstNumber, secondNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        resultView = findViewById(R.id.textView2);
+        display = findViewById(R.id.display);
 
-        Button button9 = findViewById(R.id.button9);
-        Button button10 = findViewById(R.id.button10);
-        Button button11 = findViewById(R.id.button11);
+        Button button0 = findViewById(R.id.button0);
+        Button button1 = findViewById(R.id.button1);
+        Button button2 = findViewById(R.id.button2);
+        Button button3 = findViewById(R.id.button3);
+        Button button4 = findViewById(R.id.button4);
         Button button5 = findViewById(R.id.button5);
-        Button button12 = findViewById(R.id.button12);
-        Button button13 = findViewById(R.id.button13);
-        Button button14 = findViewById(R.id.button14);
-        Button button15 = findViewById(R.id.button15);
+        Button button6 = findViewById(R.id.button6);
+        Button button7 = findViewById(R.id.button7);
+        Button button8 = findViewById(R.id.button8);
+        Button button9 = findViewById(R.id.button9);
+        Button buttonAdd = findViewById(R.id.buttonAdd);
+        Button buttonSubtract = findViewById(R.id.buttonSubtract);
+        Button buttonMultiply = findViewById(R.id.buttonMultiply);
+        Button buttonDivide = findViewById(R.id.buttonDivide);
+        Button buttonEquals = findViewById(R.id.buttonEquals);
+        Button buttonClear = findViewById(R.id.buttonClear);
+        Button buttonDecimal = findViewById(R.id.buttonDecimal);
 
-        // Set onClickListeners for buttons
-        setNumberButtonListener(button9, "7");
-        setNumberButtonListener(button10, "8");
-        setNumberButtonListener(button11, "9");
-
-        setOperatorButtonListener(button5, "+");
-        setOperatorButtonListener(button12, "-");
-        setOperatorButtonListener(button13, "*");
-        setOperatorButtonListener(button14, "/");
-
-        button15.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                performCalculation();
+                Button b = (Button) v;
+                display.append(b.getText().toString());
+            }
+        };
+
+        button0.setOnClickListener(listener);
+        button1.setOnClickListener(listener);
+        button2.setOnClickListener(listener);
+        button3.setOnClickListener(listener);
+        button4.setOnClickListener(listener);
+        button5.setOnClickListener(listener);
+        button6.setOnClickListener(listener);
+        button7.setOnClickListener(listener);
+        button8.setOnClickListener(listener);
+        button9.setOnClickListener(listener);
+        buttonDecimal.setOnClickListener(listener);
+
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firstNumber = Double.parseDouble(display.getText().toString());
+                currentOperator = "+";
+                display.setText("");
             }
         });
-    }
 
-    // Listener for number buttons
-    private void setNumberButtonListener(Button button, final String value) {
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonSubtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isOperatorPressed) {
-                    input1 += value;
-                    resultView.setText(input1);
-                } else {
-                    input2 += value;
-                    resultView.setText(input2);
+                firstNumber = Double.parseDouble(display.getText().toString());
+                currentOperator = "-";
+                display.setText("");
+            }
+        });
+
+        buttonMultiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firstNumber = Double.parseDouble(display.getText().toString());
+                currentOperator = "*";
+                display.setText("");
+            }
+        });
+
+        buttonDivide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firstNumber = Double.parseDouble(display.getText().toString());
+                currentOperator = "/";
+                display.setText("");
+            }
+        });
+
+        buttonEquals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                secondNumber = Double.parseDouble(display.getText().toString());
+                double result = 0;
+                switch (currentOperator) {
+                    case "+":
+                        result = firstNumber + secondNumber;
+                        break;
+                    case "-":
+                        result = firstNumber - secondNumber;
+                        break;
+                    case "*":
+                        result = firstNumber * secondNumber;
+                        break;
+                    case "/":
+                        result = firstNumber / secondNumber;
+                        break;
                 }
+                display.setText(String.valueOf(result));
             }
         });
-    }
 
-    // Listener for operator buttons
-    private void setOperatorButtonListener(Button button, final String value) {
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!input1.isEmpty()) {
-                    operator = value;
-                    isOperatorPressed = true;
-                    resultView.setText(operator);
-                }
+                display.setText("");
+                firstNumber = 0;
+                secondNumber = 0;
+                currentOperator = "";
             }
         });
-    }
-
-    // Perform calculation when "=" is pressed
-    private void performCalculation() {
-        if (!input1.isEmpty() && !input2.isEmpty()) {
-            double num1 = Double.parseDouble(input1);
-            double num2 = Double.parseDouble(input2);
-            double result = 0;
-
-            switch (operator) {
-                case "+":
-                    result = num1 + num2;
-                    break;
-                case "-":
-                    result = num1 - num2;
-                    break;
-                case "*":
-                    result = num1 * num2;
-                    break;
-                case "/":
-                    if (num2 != 0) {
-                        result = num1 / num2;
-                    } else {
-                        resultView.setText("Error");
-                        return;
-                    }
-                    break;
-            }
-
-            resultView.setText(String.valueOf(result));
-            resetInputs();
-        }
-    }
-
-    // Reset inputs after calculation
-    private void resetInputs() {
-        input1 = "";
-        input2 = "";
-        operator = "";
-        isOperatorPressed = false;
     }
 }
-
